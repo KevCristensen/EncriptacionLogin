@@ -59,7 +59,7 @@
             // encriptaciónToolStripMenuItem
             // 
             this.encriptaciónToolStripMenuItem.Name = "encriptaciónToolStripMenuItem";
-            this.encriptaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.encriptaciónToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.encriptaciónToolStripMenuItem.Text = "Encriptación";
             this.encriptaciónToolStripMenuItem.Click += new System.EventHandler(this.encriptaciónToolStripMenuItem_Click);
             // 
@@ -75,7 +75,7 @@
             // cerrarToolStripMenuItem1
             // 
             this.cerrarToolStripMenuItem1.Name = "cerrarToolStripMenuItem1";
-            this.cerrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem1.Size = new System.Drawing.Size(106, 22);
             this.cerrarToolStripMenuItem1.Text = "Cerrar";
             this.cerrarToolStripMenuItem1.Click += new System.EventHandler(this.cerrarToolStripMenuItem1_Click);
             // 
@@ -88,6 +88,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PantallaMenu";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.PantallaMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -37,5 +37,10 @@ namespace CapaGUI
         {
             Application.Exit();
         }
+
+        private void PantallaMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
