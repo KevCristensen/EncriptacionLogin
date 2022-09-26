@@ -33,6 +33,7 @@
             this.encriptaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.encriptaciónToolStripMenuItem});
+            this.encriptaciónToolStripMenuItem,
+            this.loginToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menú";
@@ -59,7 +61,7 @@
             // encriptaciónToolStripMenuItem
             // 
             this.encriptaciónToolStripMenuItem.Name = "encriptaciónToolStripMenuItem";
-            this.encriptaciónToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.encriptaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.encriptaciónToolStripMenuItem.Text = "Encriptación";
             this.encriptaciónToolStripMenuItem.Click += new System.EventHandler(this.encriptaciónToolStripMenuItem_Click);
             // 
@@ -78,6 +80,13 @@
             this.cerrarToolStripMenuItem1.Size = new System.Drawing.Size(106, 22);
             this.cerrarToolStripMenuItem1.Text = "Cerrar";
             this.cerrarToolStripMenuItem1.Click += new System.EventHandler(this.cerrarToolStripMenuItem1_Click);
+            // 
+            // loginToolStripMenuItem
+            // 
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // PantallaMenu
             // 
@@ -103,5 +112,6 @@
         private System.Windows.Forms.ToolStripMenuItem encriptaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
     }
 }

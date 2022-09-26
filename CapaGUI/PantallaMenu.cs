@@ -42,5 +42,11 @@ namespace CapaGUI
         {
 
         }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PantallaLogin pLogin = new PantallaLogin();
+            pLogin.ShowDialog();
+        }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="PantallaEncriptacion.Designer.cs">
       <DependentUpon>PantallaEncriptacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaLogin.Designer.cs">
+      <DependentUpon>PantallaLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PantallaEncriptacion.resx">
       <DependentUpon>PantallaEncriptacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaLogin.resx">
+      <DependentUpon>PantallaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaMenu.resx">
       <DependentUpon>PantallaMenu.cs</DependentUpon>
