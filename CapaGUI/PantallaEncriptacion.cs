@@ -111,5 +111,10 @@ namespace CapaGUI
                 MessageBox.Show(EncriptarSHA512(this.txtPassword.Text), "Contraseña en SHA512");
             }
         }
+
+        private void cboEncriptacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
