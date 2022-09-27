@@ -61,7 +61,7 @@ namespace EncriptacionLogin
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(223, 90);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(104, 20);
             this.txtUser.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace EncriptacionLogin
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(223, 133);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(104, 20);
             this.txtPassword.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace EncriptacionLogin
             // btnIngresar
             // 
             this.btnIngresar.Location = new System.Drawing.Point(133, 197);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(56, 19);
             this.btnIngresar.TabIndex = 4;
@@ -88,7 +88,7 @@ namespace EncriptacionLogin
             // btnEncriptar
             // 
             this.btnEncriptar.Location = new System.Drawing.Point(267, 197);
-            this.btnEncriptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEncriptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEncriptar.Name = "btnEncriptar";
             this.btnEncriptar.Size = new System.Drawing.Size(67, 19);
             this.btnEncriptar.TabIndex = 5;
@@ -102,12 +102,14 @@ namespace EncriptacionLogin
             this.cboEncriptacion.FormattingEnabled = true;
             this.cboEncriptacion.Items.AddRange(new object[] {
             "MD5",
-            "SHA512"});
+            "SHA512",
+            "CHACHA20"});
             this.cboEncriptacion.Location = new System.Drawing.Point(197, 33);
-            this.cboEncriptacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboEncriptacion.Margin = new System.Windows.Forms.Padding(2);
             this.cboEncriptacion.Name = "cboEncriptacion";
             this.cboEncriptacion.Size = new System.Drawing.Size(92, 21);
             this.cboEncriptacion.TabIndex = 6;
+            this.cboEncriptacion.SelectedIndexChanged += new System.EventHandler(this.cboEncriptacion_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -121,7 +123,7 @@ namespace EncriptacionLogin
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

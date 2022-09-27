@@ -72,6 +72,7 @@
             this.cboEncriptacion.Name = "cboEncriptacion";
             this.cboEncriptacion.Size = new System.Drawing.Size(92, 21);
             this.cboEncriptacion.TabIndex = 22;
+            this.cboEncriptacion.SelectedIndexChanged += new System.EventHandler(this.cboEncriptacion_SelectedIndexChanged);
             // 
             // btnIngresar
             // 
