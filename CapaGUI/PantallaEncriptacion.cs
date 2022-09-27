@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.CompilerServices;
+using CSChaCha20;
+
 
 namespace CapaGUI
 {
@@ -18,6 +20,18 @@ namespace CapaGUI
         public PantallaEncriptacion()
         {
             InitializeComponent();
+        }
+
+        public string EncriptarCHACHA20(String password)
+        {
+            byte[] mySimpleTextAsBytes = Encoding.ASCII.GetBytes(password);
+            byte[] key = new byte[32] { 142, 26, 14, 68, 43, 188, 234, 12, 73, 246, 252, 111, 8, 227, 57, 22, 168, 140, 41, 18, 91, 76, 181, 239, 95, 182, 248, 44, 165, 98, 34, 12 };
+            byte[] nonce = new byte[12] { 139, 164, 65, 213, 125, 108, 159, 118, 252, 180, 33, 88 };
+            uint counter = 1;
+            ChaCha20 forEncrypting = new ChaCha20(key, nonce, counter);
+            byte[] encryptedContent = new byte[mySimpleTextAsBytes.Length];
+            forEncrypting.EncryptBytes(encryptedContent, mySimpleTextAsBytes);
+            return BitConverter.ToString(encryptedContent);
         }
 
         public string EncriptarMD5(string password) 
@@ -72,6 +86,10 @@ namespace CapaGUI
             if (this.cboEncriptacion.SelectedItem.Equals("SHA512"))
             {
                 MessageBox.Show(EncriptarSHA512(this.txtPassword.Text), "Contraseña en SHA512");
+            }
+            if (this.cboEncriptacion.SelectedItem.Equals("CHACHA20"))
+            {
+                MessageBox.Show(EncriptarCHACHA20(this.txtPassword.Text), "Contraseña en SHA512");
             }
         }
     }

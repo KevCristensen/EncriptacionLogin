@@ -5,13 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.CompilerServices;
-
-namespace CapaGUI
+namespace CSChaCha20
 {
     /// <summary>
-	/// Class that can be used for ChaCha20 encryption / decryption
-	/// </summary> a
-	public sealed class ChaCha20 : IDisposable
+    /// Class that can be used for ChaCha20 encryption / decryption
+    /// </summary>
+    public sealed class ChaCha20 : IDisposable
     {
         /// <summary>
         /// Only allowed key lenght in bytes
