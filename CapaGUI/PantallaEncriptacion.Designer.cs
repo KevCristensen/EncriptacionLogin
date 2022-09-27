@@ -31,11 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaEncriptacion));
             this.cboEncriptacion = new System.Windows.Forms.ComboBox();
             this.btnEncriptar = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btoCerrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,7 +55,7 @@
             // 
             // btnEncriptar
             // 
-            this.btnEncriptar.Location = new System.Drawing.Point(125, 155);
+            this.btnEncriptar.Location = new System.Drawing.Point(66, 130);
             this.btnEncriptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEncriptar.Name = "btnEncriptar";
             this.btnEncriptar.Size = new System.Drawing.Size(67, 19);
@@ -67,56 +64,27 @@
             this.btnEncriptar.UseVisualStyleBackColor = true;
             this.btnEncriptar.Click += new System.EventHandler(this.btnEncriptar_Click_1);
             // 
-            // btnIngresar
-            // 
-            this.btnIngresar.Location = new System.Drawing.Point(43, 155);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(56, 19);
-            this.btnIngresar.TabIndex = 11;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(139, 111);
+            this.txtPassword.Location = new System.Drawing.Point(139, 78);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(104, 20);
             this.txtPassword.TabIndex = 10;
             // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(139, 68);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(104, 20);
-            this.txtUser.TabIndex = 9;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 111);
+            this.label2.Location = new System.Drawing.Point(20, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Contraseña";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Usuario";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // btoCerrar
             // 
-            this.btoCerrar.Location = new System.Drawing.Point(225, 155);
+            this.btoCerrar.Location = new System.Drawing.Point(166, 130);
             this.btoCerrar.Name = "btoCerrar";
             this.btoCerrar.Size = new System.Drawing.Size(65, 19);
             this.btoCerrar.TabIndex = 14;
@@ -154,11 +122,8 @@
             this.Controls.Add(this.btoCerrar);
             this.Controls.Add(this.cboEncriptacion);
             this.Controls.Add(this.btnEncriptar);
-            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "PantallaEncriptacion";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -172,11 +137,8 @@
 
         private System.Windows.Forms.ComboBox cboEncriptacion;
         private System.Windows.Forms.Button btnEncriptar;
-        private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btoCerrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;

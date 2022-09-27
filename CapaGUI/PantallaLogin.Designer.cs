@@ -32,7 +32,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btoCerrar = new System.Windows.Forms.Button();
             this.cboEncriptacion = new System.Windows.Forms.ComboBox();
-            this.btnEncriptar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -53,7 +52,7 @@
             // 
             // btoCerrar
             // 
-            this.btoCerrar.Location = new System.Drawing.Point(211, 131);
+            this.btoCerrar.Location = new System.Drawing.Point(191, 131);
             this.btoCerrar.Name = "btoCerrar";
             this.btoCerrar.Size = new System.Drawing.Size(65, 19);
             this.btoCerrar.TabIndex = 23;
@@ -74,20 +73,9 @@
             this.cboEncriptacion.Size = new System.Drawing.Size(92, 21);
             this.cboEncriptacion.TabIndex = 22;
             // 
-            // btnEncriptar
-            // 
-            this.btnEncriptar.Location = new System.Drawing.Point(111, 131);
-            this.btnEncriptar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEncriptar.Name = "btnEncriptar";
-            this.btnEncriptar.Size = new System.Drawing.Size(67, 19);
-            this.btnEncriptar.TabIndex = 21;
-            this.btnEncriptar.Text = "Encriptar";
-            this.btnEncriptar.UseVisualStyleBackColor = true;
-            this.btnEncriptar.Click += new System.EventHandler(this.btnEncriptar_Click);
-            // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(29, 131);
+            this.btnIngresar.Location = new System.Drawing.Point(54, 131);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(56, 19);
@@ -151,7 +139,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btoCerrar);
             this.Controls.Add(this.cboEncriptacion);
-            this.Controls.Add(this.btnEncriptar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
@@ -171,7 +158,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btoCerrar;
         private System.Windows.Forms.ComboBox cboEncriptacion;
-        private System.Windows.Forms.Button btnEncriptar;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUser;
