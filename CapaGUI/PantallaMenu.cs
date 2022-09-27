@@ -48,5 +48,12 @@ namespace CapaGUI
             PantallaLogin pLogin = new PantallaLogin();
             pLogin.ShowDialog();
         }
+
+        
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

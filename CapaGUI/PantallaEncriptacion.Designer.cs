@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaEncriptacion));
             this.cboEncriptacion = new System.Windows.Forms.ComboBox();
             this.btnEncriptar = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -37,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btoCerrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cboEncriptacion
@@ -51,10 +54,11 @@
             this.cboEncriptacion.Name = "cboEncriptacion";
             this.cboEncriptacion.Size = new System.Drawing.Size(92, 21);
             this.cboEncriptacion.TabIndex = 13;
+            this.cboEncriptacion.SelectedIndexChanged += new System.EventHandler(this.cboEncriptacion_SelectedIndexChanged);
             // 
             // btnEncriptar
             // 
-            this.btnEncriptar.Location = new System.Drawing.Point(125, 175);
+            this.btnEncriptar.Location = new System.Drawing.Point(125, 155);
             this.btnEncriptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEncriptar.Name = "btnEncriptar";
             this.btnEncriptar.Size = new System.Drawing.Size(67, 19);
@@ -65,7 +69,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(43, 175);
+            this.btnIngresar.Location = new System.Drawing.Point(43, 155);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(56, 19);
@@ -112,7 +116,7 @@
             // 
             // btoCerrar
             // 
-            this.btoCerrar.Location = new System.Drawing.Point(225, 175);
+            this.btoCerrar.Location = new System.Drawing.Point(225, 155);
             this.btoCerrar.Name = "btoCerrar";
             this.btoCerrar.Size = new System.Drawing.Size(65, 19);
             this.btoCerrar.TabIndex = 14;
@@ -130,11 +134,22 @@
             this.label3.Text = "Tipo";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(104, 179);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // PantallaEncriptacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 236);
+            this.ClientSize = new System.Drawing.Size(322, 227);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btoCerrar);
             this.Controls.Add(this.cboEncriptacion);
@@ -147,6 +162,7 @@
             this.Name = "PantallaEncriptacion";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,6 +179,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btoCerrar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
