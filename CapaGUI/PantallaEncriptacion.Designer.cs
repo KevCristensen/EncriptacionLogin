@@ -52,7 +52,7 @@
             this.cboEncriptacion.Name = "cboEncriptacion";
             this.cboEncriptacion.Size = new System.Drawing.Size(92, 21);
             this.cboEncriptacion.TabIndex = 13;
-            this.cboEncriptacion.SelectedIndexChanged += new System.EventHandler(this.cboEncriptacion_SelectedIndexChanged);
+            //this.cboEncriptacion.SelectedIndexChanged += new System.EventHandler(this.cboEncriptacion_SelectedIndexChanged);
             // 
             // btnEncriptar
             // 
@@ -101,7 +101,7 @@
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "Tipo";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            //this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
