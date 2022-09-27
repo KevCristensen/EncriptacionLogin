@@ -25,6 +25,8 @@ namespace CapaGUI
             this.txtPassword.UseSystemPasswordChar = true;
         }
 
+    
+
         public string EncriptarMD5(string password)
         {
             var msgBytes = Encoding.ASCII.GetBytes(password);
@@ -61,17 +63,7 @@ namespace CapaGUI
             System.GC.Collect();
         }
 
-        private void btnEncriptar_Click(object sender, EventArgs e)
-        {
-            if (this.cboEncriptacion.SelectedItem.Equals("MD5"))
-            {
-                MessageBox.Show(EncriptarMD5(this.txtPassword.Text), "Contraseña en MD5");
-            }
-            else
-            {
-                MessageBox.Show(EncriptarSHA512(this.txtPassword.Text), "Contraseña en SHA512");
-            }
-        }
+
 
         private void btnIngresar_Click_1(object sender, EventArgs e)
         {
@@ -83,7 +75,7 @@ namespace CapaGUI
                 }
                 else
                 {
-                    MessageBox.Show("Usuario y conraseñas incorrectos!");
+                    MessageBox.Show("Usuario o conraseñas incorrectos!");
                 }
             }
             else
@@ -94,7 +86,7 @@ namespace CapaGUI
                 }
                 else
                 {
-                    MessageBox.Show("Usuario y conraseñas incorrectos!");
+                    MessageBox.Show("Usuario o conraseñas incorrectos!");
                 }
             }
             //SHA512 = c70b5dd9ebfb6f51d09d4132b7170c9d20750a7852f00680f65658f0310e810056e6763c34c9a00b0e940076f54495c169fc2302cceb312039271c43469507dc
