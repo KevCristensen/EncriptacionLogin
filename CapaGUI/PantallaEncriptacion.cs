@@ -49,6 +49,8 @@ namespace CapaGUI
             return Convert.ToString(resultado); 
         }
 
+       
+
         public String EncriptarSHA512(string password)
         {
             var msgBytes = Encoding.ASCII.GetBytes(password);
@@ -89,7 +91,7 @@ namespace CapaGUI
             }
             if (this.cboEncriptacion.SelectedItem.Equals("CHACHA20"))
             {
-                MessageBox.Show(EncriptarCHACHA20(this.txtPassword.Text), "Contraseña en SHA512");
+                MessageBox.Show(EncriptarCHACHA20(this.txtPassword.Text), "Contraseña en CHACHA20");
             }
         }
     }
