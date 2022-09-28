@@ -69,10 +69,27 @@ namespace CapaGUI
                     MessageBox.Show("Usuario o conraseñas incorrectos!");
                 }
             }
+            if (this.cboEncriptacion.SelectedItem.Equals("AES"))
+            {
+                if (this.txtUser.Text.Equals("gil") && this.txtPassword.Text.Equals("ED-EC-D5-E8-D0-3C-BF-E0-8B-9D-85-97-15-B8-21-4C"))
+                {
+                    MessageBox.Show("Bienvenido");
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o conraseñas incorrectos!");
+                }
+            }
 
             //SHA512 = c70b5dd9ebfb6f51d09d4132b7170c9d20750a7852f00680f65658f0310e810056e6763c34c9a00b0e940076f54495c169fc2302cceb312039271c43469507dc
             //MD5 = e99a18c428cb38d5f260853678922e03
             //CSCHACHA20 = 3B-2A-79-52-51-01
+            //AES = ED-EC-D5-E8-D0-3C-BF-E0-8B-9D-85-97-15-B8-21-4C
+        }
+
+        private void cboEncriptacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

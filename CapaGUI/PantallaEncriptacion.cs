@@ -22,6 +22,77 @@ namespace CapaGUI
             InitializeComponent();
         }
 
+        static byte[] EncryptStringToBytes(string plainText, byte[] Key, byte[] IV)
+        {
+            // Check arguments. 
+            if (plainText == null || plainText.Length <= 0)
+                throw new ArgumentNullException("plainText");
+            if (Key == null || Key.Length <= 0)
+                throw new ArgumentNullException("Key");
+            if (IV == null || IV.Length <= 0)
+                throw new ArgumentNullException("IV");
+            byte[] encrypted;
+            // Create an RijndaelManaged object 
+            // with the specified key and IV. 
+            using (RijndaelManaged rijAlg = new RijndaelManaged())
+            {
+                rijAlg.Key = Key;
+                rijAlg.IV = IV;
+
+                // Create a decryptor to perform the stream transform.
+                ICryptoTransform encryptor = rijAlg.CreateEncryptor(rijAlg.Key, rijAlg.IV);
+
+                // Create the streams used for encryption. 
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+
+                            //Write all data to the stream.
+                            swEncrypt.Write(plainText);
+                        }
+                        encrypted = msEncrypt.ToArray();
+                    }
+                }
+            }
+
+
+            // Return the encrypted bytes from the memory stream. 
+            return encrypted;
+
+        }
+
+        public string EncriptarAES(string password)
+        {
+            try
+            {
+
+
+                // Create a new instance of the RijndaelManaged 
+                // class.  This generates a new key and initialization  
+                // vector (IV). 
+                using (RijndaelManaged myRijndael = new RijndaelManaged())
+                {
+
+                    myRijndael.GenerateKey();
+                    myRijndael.GenerateIV();
+                    // Encrypt the string to an array of bytes. 
+                    byte[] encrypted = EncryptStringToBytes(password, myRijndael.Key, myRijndael.IV);
+                    return BitConverter.ToString(encrypted);
+                }
+                
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: {0}", e.Message);
+                return "";
+            }
+
+        }
+
         public string EncriptarCHACHA20(String password)
         {
             byte[] mySimpleTextAsBytes = Encoding.ASCII.GetBytes(password);
@@ -71,6 +142,7 @@ namespace CapaGUI
             this.cboEncriptacion.SelectedIndex = 0;
             //this.btnEncriptar.Enabled = false;
             this.txtPassword.UseSystemPasswordChar = true;
+
         }
 
         private void btoCerrar_Click(object sender, EventArgs e)
@@ -93,6 +165,15 @@ namespace CapaGUI
             {
                 MessageBox.Show(EncriptarCHACHA20(this.txtPassword.Text), "Contraseña en CHACHA20");
             }
+            if (this.cboEncriptacion.SelectedItem.Equals("AES"))
+            {
+                MessageBox.Show(EncriptarAES(this.txtPassword.Text), "Contraseña en AES");
+            }
+        }
+
+        private void cboEncriptacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
