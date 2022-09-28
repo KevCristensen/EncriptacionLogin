@@ -74,10 +74,5 @@ namespace CapaGUI
             //MD5 = e99a18c428cb38d5f260853678922e03
             //CHACHA20 = 3B-2A-79-52-51-01
         }
-
-        private void cboEncriptacion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
