@@ -66,7 +66,8 @@
             this.cboEncriptacion.FormattingEnabled = true;
             this.cboEncriptacion.Items.AddRange(new object[] {
             "MD5",
-            "SHA512"});
+            "SHA512",
+            "CHACHA20"});
             this.cboEncriptacion.Location = new System.Drawing.Point(122, 10);
             this.cboEncriptacion.Margin = new System.Windows.Forms.Padding(2);
             this.cboEncriptacion.Name = "cboEncriptacion";
