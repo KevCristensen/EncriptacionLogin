@@ -97,5 +97,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSChaCha20\CSChaCha20.csproj">
+      <Project>{ba903af3-f03b-478f-bdbf-68a8bc2d85c7}</Project>
+      <Name>CSChaCha20</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
